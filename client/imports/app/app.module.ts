@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { TodoAddComponent } from './todo-add/todo-add.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AutoLoginComponent } from './autologin/autologin.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         redirectTo: '/todoList',
         pathMatch: 'full'
       },
+      // Auto Login
+      {
+        path: 'autologin',
+        component: AutoLoginComponent
+      },
       // 404 Page
       {
         path: '**',
@@ -41,10 +47,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppComponent,
     TodoAddComponent,
     TodoListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AutoLoginComponent
   ],
   bootstrap: [
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+
+  login() {
+
+  }
+}
