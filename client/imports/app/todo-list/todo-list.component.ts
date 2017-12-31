@@ -15,6 +15,7 @@ import { Todo } from '../../../../imports/models/todo';
 export class TodoListComponent implements OnInit, OnDestroy {
     todos: Observable<Todo[]>;
     todoListSubscription: Subscription;
+    checked: boolean;
     ngOnInit() {
         console.log("User id =  " + Meteor.userId());
         this.todoListSubscription = MeteorObservable.subscribe('todoList').subscribe(() => {

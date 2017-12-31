@@ -3,6 +3,7 @@
 <ul>
   <li *ngFor="let todo of todos | async">
     {{todo.content}}
+    <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
     <button (click)="removeTodo(todo._id)" class="deleteBtn">Delete</button>
   </li>
 </ul>
