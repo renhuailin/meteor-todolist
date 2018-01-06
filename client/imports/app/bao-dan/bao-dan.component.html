@@ -1,0 +1,25 @@
+身份证：
+正面： <input type="file" (change)="onFileChange($event,'IDCard1')" />
+反面： <input type="file" (change)="onFileChange($event,'IDCard2')" />
+
+行驶证：
+正面： <input type="file" (change)="onFileChange($event,'DrivingLicense1')" />
+反面： <input type="file" (change)="onFileChange($event,'DrivingLicense2')" />
+
+登记证：
+正面： <input type="file" (change)="onFileChange($event,'RegCert1')" />
+反面： <input type="file" (change)="onFileChange($event,'RegCert1')" />
+
+
+
+
+<p>
+    抵押类型   <mat-select placeholder="抵押类型">
+        <mat-option *ngFor="let diya of diyaTypes" [value]="diya">
+          {{ diya }}
+        </mat-option>
+      </mat-select>
+</p>
+
+
+

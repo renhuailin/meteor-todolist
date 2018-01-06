@@ -12,10 +12,18 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AutoLoginComponent } from './autologin/autologin.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { BaoDanComponent } from 'client/imports/app/bao-dan/bao-dan.component';
+import {MyOwnCustomMaterialModule} from './my-own-custom-material/my-own-custom-material.module'
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
+    // MatButtonModule, MatCheckboxModule,
+    MyOwnCustomMaterialModule,
     RouterModule.forRoot([
       {
         path: 'todoList',
@@ -36,6 +44,13 @@ import { AutoLoginComponent } from './autologin/autologin.component';
         path: 'autologin',
         component: AutoLoginComponent
       },
+
+      // Auto Login
+      {
+        path: 'baodan',
+        component: BaoDanComponent
+      },
+
       // 404 Page
       {
         path: '**',
@@ -48,7 +63,8 @@ import { AutoLoginComponent } from './autologin/autologin.component';
     TodoAddComponent,
     TodoListComponent,
     PageNotFoundComponent,
-    AutoLoginComponent
+    AutoLoginComponent,
+    BaoDanComponent
   ],
   bootstrap: [
     AppComponent
